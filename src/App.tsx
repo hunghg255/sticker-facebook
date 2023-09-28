@@ -65,7 +65,7 @@ const _stickers: StickerType[] = [
   {
     id: '479784002807222',
     frameCount: 8,
-    frameRate: 100,
+    frameRate: 60,
     framesPerCol: 3,
     framesPerRow: 3,
     spriteImg: s5,
@@ -73,7 +73,7 @@ const _stickers: StickerType[] = [
   {
     id: '479784002807222',
     frameCount: 20,
-    frameRate: 100,
+    frameRate: 60,
     framesPerCol: 4,
     framesPerRow: 5,
     spriteImg: s6,
@@ -81,7 +81,7 @@ const _stickers: StickerType[] = [
   {
     id: '479784002807222',
     frameCount: 20,
-    frameRate: 100,
+    frameRate: 90,
     framesPerCol: 4,
     framesPerRow: 5,
     spriteImg: s7,
@@ -89,7 +89,7 @@ const _stickers: StickerType[] = [
   {
     id: '479784002807222',
     frameCount: 18,
-    frameRate: 100,
+    frameRate: 90,
     framesPerCol: 4,
     framesPerRow: 5,
     spriteImg: s8,

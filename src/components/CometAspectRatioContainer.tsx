@@ -34,26 +34,21 @@ let i = {
 export function CometAspectRatioContainer(a) {
   var c = a.aspectRatio,
     d = a.children,
-    e = a.style,
-    f = a.testid;
-  f = a.xstyle;
+    e = a.style;
 
   if (c <= 0) throw new Error('Aspect ratio must be a non-zero, positive number: ' + c);
 
-  return React.createElement('div', {
-    style: {
-      ...i.container,
-      ...f,
-      ...Object.assign({}, e, {
-        paddingTop: 100 / c + '%',
-      }),
-    },
-    'data-testid': void 0,
-    children:
-      d != null &&
-      React.createElement('div', {
-        style: { ...i.content },
-        children: d,
-      }),
-  });
+  return (
+    <div
+      style={{
+        ...i.container,
+        ...Object.assign({}, e, {
+          paddingTop: 100 / c + '%',
+        }),
+      }}
+      data-testid={undefined}
+    >
+      {d != null && <div style={{ ...i.content }}>{d}</div>}
+    </div>
+  );
 }

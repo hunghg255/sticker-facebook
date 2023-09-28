@@ -4,7 +4,7 @@ import { useLayoutEffect } from 'react';
 import { useInvalidNumberThrowsViolation } from './useInvalidNumberThrowsViolation';
 import { CometStyleXSheet } from '@/utils/stylex-theme';
 
-// CometStyleXSheet.injectTheme();
+CometStyleXSheet.injectTheme();
 
 // This is used for stylex inject priority
 const INJECT_PRIORITY = 0;
@@ -66,8 +66,6 @@ export function useSpriteAnimation(frameCount: number, framesPerCol: number, fra
 
   useLayoutEffect(
     function () {
-      // const a = getAnimationStylex(_animationName, frameCount, framesPerCol, framesPerRow);
-
       inject(
         getAnimationStylex(_animationName, frameCount, framesPerCol, framesPerRow),
         INJECT_PRIORITY,

@@ -15,15 +15,15 @@ interface Props {
 export function CometAnimatedSticker(props: Props) {
   const { alt, frameCount, frameRate, framesPerCol, framesPerRow, uri, ...otherProps } = props;
 
-  return React.createElement(
-    CometAnimatedSprite,
-    Object.assign({}, otherProps, {
-      accessibilityCaption: alt,
-      frameCount,
-      frameRate,
-      framesPerCol,
-      framesPerRow,
-      spriteUri: uri,
-    }),
+  return (
+    <CometAnimatedSprite
+      accessibilityCaption={alt}
+      frameCount={frameCount}
+      frameRate={frameRate}
+      framesPerCol={framesPerCol}
+      framesPerRow={framesPerRow}
+      spriteUri={uri}
+      {...otherProps}
+    />
   );
 }

@@ -83,13 +83,12 @@ export function CometSpriteBase(props: Props) {
       animationIterationCount,
       animationPlayState,
       animationTimingFunction,
-      position,
-      start,
-      top,
     } = styles.innerSprite;
 
     return `${animationName} ${animationDuration} ${animationTimingFunction} ${animationDelay} ${animationIterationCount} ${animationFillMode} ${animationPlayState}`;
   }, [animationStyle]);
+
+  const { start, top } = styles.innerSprite;
 
   return (
     <div ref={_mergeRefs} onMouseOver={onHoverIn} style={{ ...style, ...styles.spriteButton }}>
@@ -100,6 +99,8 @@ export function CometSpriteBase(props: Props) {
         ref={imgRef}
         style={{
           ...styleImg,
+          start,
+          top,
           animation,
         }}
       />

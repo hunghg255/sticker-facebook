@@ -16,6 +16,7 @@ export function useCometAnimationStateReducer(a) {
   const g = a[1];
   const i = f.shouldAnimate && !f.hasAnimated;
   const j = d * c;
+
   return React.useMemo(
     function () {
       return {

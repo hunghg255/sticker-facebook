@@ -67,10 +67,9 @@ export function CometAnimatedSprite(props: Props) {
     }
   }, [l, o]);
 
-  return React.createElement(
-    CometSpriteBase,
-    Object.assign({}, otherProps, {
-      animationStyle: function (a) {
+  return (
+    <CometSpriteBase
+      animationStyle={(a) => {
         return n(a)
           ? {
               animationDuration: m + 'ms',
@@ -79,13 +78,13 @@ export function CometAnimatedSprite(props: Props) {
           : {
               animation: 'none',
             };
-      },
-      // containerRef: f, // NOTE: not available for SHARE version
-      imgHeight: c + '%',
-      imgRef: k,
-      imgWidth: d + '%',
-      onHoverIn: e,
-      src: spriteUri,
-    }),
+      }}
+      imgHeight={c + '%'}
+      imgRef={k}
+      imgWidth={d + '%'}
+      onHoverIn={e}
+      src={spriteUri}
+      {...otherProps}
+    />
   );
 }

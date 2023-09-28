@@ -1,12 +1,4 @@
 //@ts-nocheck
-
-/**
- * Copyright (c) Ladifire, Inc. And its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
 const canUseDOM = !!(
   typeof window !== 'undefined' &&
   window.document &&
@@ -155,8 +147,6 @@ class StyleXSheet {
   }
 
   injectTheme() {
-    console.log(this);
-
     this.rootTheme != null &&
       this.insert(buildThemeVariables(':root, .' + _DEFAULT_THEME_CLASS_NAME, this.rootTheme), 0);
     this.customTheme != null &&
